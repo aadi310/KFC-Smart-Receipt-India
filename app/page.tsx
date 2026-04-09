@@ -1586,12 +1586,14 @@ Powered by RDEP
     style={getModalPositionRelativeToContainer(historyButtonRef)}
     className="bg-white rounded-lg w-full overflow-hidden shadow-2xl z-[9999] max-w-sm border border-gray-100 font-poppins"
   >
-    {/* Header - KFC Red */}
+
+    {/* Header */}
     <div className="flex justify-between items-center p-4 bg-[#E4002B] text-white">
       <h3 className="text-base font-bold flex items-center uppercase tracking-tight">
         <History className="h-5 w-5 mr-2" />
         Order History
       </h3>
+
       <Button
         variant="ghost"
         size="icon"
@@ -1619,7 +1621,9 @@ Powered by RDEP
     {/* Transaction List */}
     <div className="max-h-80 overflow-y-auto p-3 bg-gray-50/50">
       <div className="space-y-2">
+
         {transactionHistory.map((transaction) => (
+
           <button
             key={transaction.id}
             onClick={() => {
@@ -1629,26 +1633,33 @@ Powered by RDEP
             }}
             className="w-full flex items-center p-3 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-[#E4002B] transition-all cursor-pointer group"
           >
+
             <div className="bg-red-50 p-2 rounded-lg mr-3 group-hover:bg-[#E4002B] transition-colors">
               <FileText className="h-5 w-5 text-[#E4002B] group-hover:text-white" />
             </div>
+
             <div className="flex-grow text-left">
               <div className="font-bold text-sm text-gray-900 leading-none mb-1">
                 KFC
               </div>
+
               <div className="text-gray-400 text-[11px] font-medium uppercase tracking-tighter">
                 {transaction.date}
               </div>
             </div>
+
             <div className="font-bold text-[#E4002B]">
-              S${transaction.amount.toFixed(2)}
+              ₹{transaction.amount.toFixed(2)}
             </div>
+
           </button>
+
         ))}
+
       </div>
     </div>
 
-    {/* Footer Section */}
+    {/* Footer */}
     <div className="p-3 border-t bg-white">
       <Button
         className="w-full bg-gray-900 hover:bg-black text-white font-bold h-10 rounded-xl transition-all"
@@ -1657,8 +1668,10 @@ Powered by RDEP
         Close History
       </Button>
     </div>
+
   </div>
 )}
+        
         {/* Refer & Earn Modal */}
         {showReferModal && (
           <div
