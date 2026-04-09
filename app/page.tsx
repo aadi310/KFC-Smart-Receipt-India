@@ -141,137 +141,139 @@ export default function Home() {
 
   const receipts = {
   current: {
-    id: "KFC-PLAZA-SING-71922864",
+    id: "KFC-CP-DEL-71922864",
     date: "07-11-2025",
     time: "19:22:18",
-    associate: "Nurul Aziz",
-    branch: "Plaza Singapura",
+    associate: "Rahul Verma",
+    branch: "Connaught Place",
     items: [
       {
         id: 0,
-        name: "2-pc Chicken Variety Box",
-        size: "Standard Box", // Portioned for 1 pax
-        description: "2pcs Chicken (OR/HS), 1 Reg Whipped Potato, 1 Reg Coleslaw, 1 Pepsi Black",
-        price: 10.95,
+        name: "2 Pc Hot & Crispy Chicken Meal",
+        size: "Regular Meal",
+        description: "2 Pc Hot & Crispy Chicken, Regular Fries, Pepsi",
+        price: 229,
         quantity: 1,
         category: "Meals",
         taxApplicable: true,
-        baseAmount: 10.05,
-        tax: 0.90,
-        itemCode: "BOX001",
-        type: "Original Recipe",
+        baseAmount: 218.10,
+        tax: 10.90,
+        itemCode: "MEAL001",
+        type: "Hot & Crispy",
       },
       {
         id: 1,
         name: "Zinger Burger",
-        size: "Single Patty", // Standard burger size
-        description: "Signature spicy chicken thigh burger with lettuce and mayo",
-        price: 6.95,
+        size: "Single Patty",
+        description: "Spicy chicken fillet burger with lettuce and mayo",
+        price: 199,
         quantity: 1,
         category: "Burgers",
         taxApplicable: true,
-        baseAmount: 6.38,
-        tax: 0.57,
+        baseAmount: 189.52,
+        tax: 9.48,
         itemCode: "B001",
         type: "Spicy",
       },
       {
         id: 2,
-        name: "BBQ Cheese Fries",
-        size: "Regular", // Standard side portion
-        description: "Signature golden fries topped with cheese sauce and BBQ sauce",
-        price: 5.20,
+        name: "French Fries",
+        size: "Regular",
+        description: "Golden crispy salted fries",
+        price: 109,
         quantity: 1,
         category: "Sides",
         taxApplicable: true,
-        baseAmount: 4.77,
-        tax: 0.43,
-        itemCode: "S005",
-        flavor: "BBQ Cheese",
+        baseAmount: 103.81,
+        tax: 5.19,
+        itemCode: "S001",
+        flavor: "Salted",
       },
     ],
-    subtotal: 21.19,
-    tax: 1.91,
-    total: 23.10,
+    subtotal: 511.43,
+    tax: 25.57,
+    total: 537,
   },
+
   hist1: {
-    id: "KFC-VIVO-CITY-86448317",
+    id: "KFC-BKC-MUM-86448317",
     date: "20-10-2025",
     time: "14:22:18",
-    associate: "Aisha Rahman",
-    branch: "VivoCity",
+    associate: "Sneha Iyer",
+    branch: "BKC Mumbai",
     items: [
       {
         id: 0,
-        name: "5-pc Chicken Bucket",
-        size: "5-Piece Bucket", // Quantity based size
-        description: "5 pieces of Chicken (Original Recipe / Hot & Crispy)",
-        price: 18.50,
+        name: "5 Pc Hot & Crispy Bucket",
+        size: "5-Piece Bucket",
+        description: "5 pieces of signature Hot & Crispy chicken",
+        price: 549,
         quantity: 1,
         category: "Sharing",
         taxApplicable: true,
-        baseAmount: 16.97,
-        tax: 1.53,
+        baseAmount: 522.86,
+        tax: 26.14,
         itemCode: "SHR005",
-        type: "Mixed",
+        type: "Hot & Crispy",
       },
       {
         id: 1,
-        name: "Egg Tart",
-        size: "4-pc Pack", // Multi-pack size
-        description: "KFC Signature buttery, flaky crust Portuguese egg tart",
-        price: 1.50,
-        quantity: 4,
+        name: "Chocolate Lava Cake",
+        size: "Single",
+        description: "Warm chocolate lava dessert",
+        price: 109,
+        quantity: 2,
         category: "Dessert",
         taxApplicable: true,
-        baseAmount: 5.50,
-        tax: 0.50,
+        baseAmount: 207.62,
+        tax: 10.38,
         itemCode: "D001",
-        flavor: "Original",
+        flavor: "Chocolate",
       },
     ],
-    subtotal: 22.45,
-    tax: 2.05,
-    total: 24.50,
+    subtotal: 730.48,
+    tax: 36.52,
+    total: 767,
   },
+
   hist2: {
-    id: "KFC-TAMPINES-86448316",
+    id: "KFC-ORION-BLR-86448316",
     date: "15-10-2025",
     time: "12:45:33",
-    associate: "Budi Hartono",
-    branch: "Tampines Mall",
+    associate: "Arjun Nair",
+    branch: "Orion Mall Bengaluru",
     items: [
       {
         id: 0,
-        name: "Zinger Stacker Meal",
-        size: "Medium Meal", // Refers to Fries and Drink size
-        description: "Zinger Stacker Burger, Fries, and Pepsi",
-        price: 12.10,
+        name: "Zinger Meal",
+        size: "Regular Meal",
+        description: "Zinger Burger, Fries, and Pepsi",
+        price: 299,
         quantity: 1,
         category: "Meals",
         taxApplicable: true,
-        baseAmount: 11.10,
-        tax: 1.00,
+        baseAmount: 284.76,
+        tax: 14.24,
         itemCode: "MEAL009",
       },
       {
         id: 1,
-        name: "6-pc Nuggets",
-        size: "6-Piece", // Standard snack count
-        description: "Golden brown chicken nuggets",
-        price: 4.80,
+        name: "Chicken Nuggets",
+        size: "6-Piece",
+        description: "Crispy chicken nuggets",
+        price: 149,
         quantity: 2,
         category: "Snacks",
         taxApplicable: true,
-        baseAmount: 8.81,
-        tax: 0.79,
+        baseAmount: 283.81,
+        tax: 14.19,
         itemCode: "SNK002",
         sauce: "BBQ Sauce",
       },
     ],
-    subtotal: 19.91,
-    tax: 1.79,
-    total: 21.70,
+    subtotal: 568.57,
+    tax: 28.43,
+    total: 597,
   },
 };
 
@@ -284,10 +286,10 @@ export default function Home() {
       id: "current",
       date: "07-11-2025",
       branch: "KFC",
-      amount: currentReceiptId === "current" ? receipts.current.subtotal + receipts.current.tax : 23.10,
+      amount: currentReceiptId === "current" ? receipts.current.subtotal + receipts.current.tax : 537.00,
     },
-    { id: "hist1", date: "20-10-2025", branch: "KFC", amount: 24.50 },
-    { id: "hist2", date: "15-10-2025", branch: "KFC", amount: 21.70 },
+    { id: "hist1", date: "20-10-2025", branch: "KFC", amount: 767.00 },
+    { id: "hist2", date: "15-10-2025", branch: "KFC", amount: 597.00 },
   ]
 
   const toggleProductExpansion = (productId: number) => {
@@ -371,7 +373,7 @@ export default function Home() {
   }
 
   const handleEmailReceipt = () => {
-    window.open(`mailto:?subject=Receipt from KFC Singapore&body=Receipt ID: ${currentReceipt.id}`)
+    window.open(`mailto:?subject=Receipt from KFC India&body=Receipt ID: ${currentReceipt.id}`)
   }
 
   const handleDownloadReceipt = () => {
@@ -379,137 +381,293 @@ export default function Home() {
   <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>KFC Singapore Receipt</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; line-height: 1.4; color: #000; background: #fff; width: 800px; margin: 0 auto; padding: 20px; }
-    
-    /* KFC Branding Colors */
-    .receipt-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid #E4002B; }
-    
-    .company-info h1 { font-size: 32px; color: #E4002B; font-weight: 900; margin-bottom: 4px; font-style: italic; }
-    .company-info p { font-size: 12px; color: #333; line-height: 1.3; font-weight: 500; }
-    
-    .bill-info { text-align: right; font-size: 12px; }
-    .bill-info div { margin-bottom: 4px; }
-    .bill-id { font-weight: bold; color: #E4002B; }
-    
-    .customer-section { background: #fff5f5; padding: 15px; margin-bottom: 20px; border-left: 4px solid #E4002B; border-radius: 0 8px 8px 0; }
-    .customer-section h3 { color: #E4002B; font-size: 16px; margin-bottom: 2px; font-weight: 700; }
-    .customer-section p { font-size: 12px; font-weight: 500; color: #555; }
+<meta charset="UTF-8">
+<title>KFC India Receipt</title>
 
-    .items-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-    .items-table th { background: #E4002B; color: white; padding: 12px 8px; text-align: left; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
-    .items-table td { padding: 12px 8px; border-bottom: 1px solid #f0f0f0; font-size: 12px; vertical-align: top; }
-    
-    .item-name { font-weight: 700; color: #000; margin-bottom: 3px; font-size: 13px; }
-    .item-desc { font-size: 11px; color: #666; line-height: 1.3; }
-    .item-specs { font-size: 10px; color: #E4002B; margin-top: 4px; font-weight: 600; text-transform: uppercase; }
-    
-    .totals-section { display: flex; justify-content: space-between; margin-bottom: 20px; padding: 0 10px; }
-    .pieces-purchased { font-size: 14px; font-weight: 700; color: #333; }
-    
-    .totals-table { text-align: right; min-width: 200px; }
-    .totals-table div { margin-bottom: 6px; font-size: 13px; font-weight: 500; }
-    .net-total { font-weight: 800; font-size: 18px; color: #E4002B; border-top: 2px solid #E4002B; padding-top: 8px; margin-top: 8px; }
-    
-    .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px dashed #ccc; font-size: 12px; color: #444; }
-    .footer strong { color: #E4002B; }
-    .powered-by { margin-top: 15px; font-size: 10px; font-weight: 700; color: #999; text-transform: uppercase; }
-    
-    @media print { body { -webkit-print-color-adjust: exact; width: 100%; padding: 0; } }
-  </style>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+font-size:14px;
+line-height:1.4;
+color:#000;
+background:#fff;
+width:800px;
+margin:0 auto;
+padding:20px;
+}
+
+.receipt-header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+margin-bottom:30px;
+padding-bottom:20px;
+border-bottom:3px solid #E4002B;
+}
+
+.company-info h1{
+font-size:32px;
+color:#E4002B;
+font-weight:900;
+margin-bottom:4px;
+font-style:italic;
+}
+
+.company-info p{
+font-size:12px;
+color:#333;
+line-height:1.3;
+font-weight:500;
+}
+
+.bill-info{
+text-align:right;
+font-size:12px;
+}
+
+.bill-info div{
+margin-bottom:4px;
+}
+
+.bill-id{
+font-weight:bold;
+color:#E4002B;
+}
+
+.customer-section{
+background:#fff5f5;
+padding:15px;
+margin-bottom:20px;
+border-left:4px solid #E4002B;
+border-radius:0 8px 8px 0;
+}
+
+.customer-section h3{
+color:#E4002B;
+font-size:16px;
+margin-bottom:2px;
+font-weight:700;
+}
+
+.customer-section p{
+font-size:12px;
+font-weight:500;
+color:#555;
+}
+
+.items-table{
+width:100%;
+border-collapse:collapse;
+margin-bottom:20px;
+}
+
+.items-table th{
+background:#E4002B;
+color:white;
+padding:12px 8px;
+text-align:left;
+font-size:11px;
+font-weight:bold;
+text-transform:uppercase;
+letter-spacing:0.5px;
+}
+
+.items-table td{
+padding:12px 8px;
+border-bottom:1px solid #f0f0f0;
+font-size:12px;
+vertical-align:top;
+}
+
+.item-name{
+font-weight:700;
+margin-bottom:3px;
+font-size:13px;
+}
+
+.item-desc{
+font-size:11px;
+color:#666;
+}
+
+.item-specs{
+font-size:10px;
+color:#E4002B;
+margin-top:4px;
+font-weight:600;
+text-transform:uppercase;
+}
+
+.totals-section{
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+padding:0 10px;
+}
+
+.totals-table{
+text-align:right;
+min-width:200px;
+}
+
+.totals-table div{
+margin-bottom:6px;
+font-size:13px;
+}
+
+.net-total{
+font-weight:800;
+font-size:18px;
+color:#E4002B;
+border-top:2px solid #E4002B;
+padding-top:8px;
+margin-top:8px;
+}
+
+.footer{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px dashed #ccc;
+font-size:12px;
+color:#444;
+}
+
+.footer strong{
+color:#E4002B;
+}
+
+.powered-by{
+margin-top:15px;
+font-size:10px;
+font-weight:700;
+color:#999;
+text-transform:uppercase;
+}
+
+@media print{
+body{-webkit-print-color-adjust:exact;width:100%;padding:0;}
+}
+
+</style>
 </head>
+
 <body>
-  <div class="receipt-header">
-    <div class="logo-section">
-      <div class="company-info">
-        <h1>KFC</h1>
-        <p><strong>Kentucky Fried Chicken Management Pte Ltd</strong><br>
-        10 Jalan Ahmad Ibrahim, Singapore 628965<br>
-        Phone: +65 6222 3333<br>
-        GST Reg No: M2-0021281-1</p>
-      </div>
-    </div>
-    <div class="bill-info">
-      <div><strong>Receipt ID:</strong> <span class="bill-id">KFC-PLAZA-SING-71922864</span></div>
-      <div><strong>Date:</strong> 07-11-2026 19:22:18</div>
-      <div><strong>Counter Associate:</strong> Nurul Aziz</div>
-    </div>
-  </div>
 
-  <div class="customer-section">
-    <h3>Guest: ${customerName}</h3>
-    <p>It was a pleasure serving you. Finger Lickin' Good!</p>
-  </div>
+<div class="receipt-header">
 
-  <table class="items-table">
-    <thead>
-      <tr>
-        <th style="width: 50%;">Menu Item</th>
-        <th style="width: 10%;">Qty</th>
-        <th style="width: 15%;">Size</th>
-        <th style="width: 12%;">Price</th>
-        <th style="width: 13%;">Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="item-name">2-pc Chicken Variety Box</div>
-          <div class="item-desc">2pcs Chicken (OR/HS), Reg Whipped Potato, Reg Coleslaw, Pepsi Black</div>
-          <div class="item-specs">Type: Original Recipe | Drink: Pepsi Black</div>
-        </td>
-        <td>1</td>
-        <td>Standard Box</td>
-        <td>S$10.95</td>
-        <td><strong>S$10.95</strong></td>
-      </tr>
-      <tr>
-        <td>
-          <div class="item-name">Zinger Burger</div>
-          <div class="item-desc">Signature spicy chicken thigh burger with lettuce and mayo</div>
-          <div class="item-specs">Flavor: Spicy</div>
-        </td>
-        <td>1</td>
-        <td>Single Patty</td>
-        <td>S$6.95</td>
-        <td><strong>S$6.95</strong></td>
-      </tr>
-      <tr>
-        <td>
-          <div class="item-name">BBQ Cheese Fries</div>
-          <div class="item-desc">Golden fries topped with cheese and BBQ sauce</div>
-          <div class="item-specs">Flavor: BBQ Cheese</div>
-        </td>
-        <td>1</td>
-        <td>Regular</td>
-        <td>S$5.20</td>
-        <td><strong>S$5.20</strong></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="company-info">
+<h1>KFC</h1>
 
-  <div class="totals-section">
-    <div class="pieces-purchased">
-      Items Ordered: 3
-    </div>
-    <div class="totals-table">
-      <div>Subtotal: <strong>S$21.19</strong></div>
-      <div>GST (9%): <strong>S$1.91</strong></div>
-      <div class="net-total">Total: <strong>S$23.10</strong></div>
-    </div>
-  </div>
+<p>
+<strong>KFC India</strong><br>
+Restaurant operated by Devyani International Ltd<br>
+Sector 44, Gurugram, Haryana 122003<br>
+GSTIN: 06AACCD5295M1Z3
+</p>
 
-  <div class="footer">
-    <p><strong>Thank you for dining with KFC Singapore!</strong></p>
-    <p>Follow us on Instagram @kfc_sg or visit www.kfc.com.sg</p>
-    <div class="powered-by">Powered by RDEP</div>
-  </div>
+</div>
+
+<div class="bill-info">
+<div><strong>Receipt ID:</strong> <span class="bill-id">KFC-IN-DEL-71922864</span></div>
+<div><strong>Date:</strong> 07-11-2026 19:22:18</div>
+<div><strong>Counter Associate:</strong> Rahul Verma</div>
+</div>
+
+</div>
+
+
+<div class="customer-section">
+<h3>Guest: ${customerName}</h3>
+<p>Thank you for visiting KFC India.</p>
+</div>
+
+
+<table class="items-table">
+
+<thead>
+<tr>
+<th style="width:50%">Menu Item</th>
+<th style="width:10%">Qty</th>
+<th style="width:15%">Size</th>
+<th style="width:12%">Price</th>
+<th style="width:13%">Total</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>
+<div class="item-name">2 Pc Hot & Crispy Chicken Meal</div>
+<div class="item-desc">2 Pc Hot & Crispy Chicken, Fries, Pepsi</div>
+<div class="item-specs">Type: Hot & Crispy</div>
+</td>
+<td>1</td>
+<td>Regular</td>
+<td>₹229</td>
+<td><strong>₹229</strong></td>
+</tr>
+
+<tr>
+<td>
+<div class="item-name">Zinger Burger</div>
+<div class="item-desc">Signature spicy chicken fillet burger with lettuce & mayo</div>
+<div class="item-specs">Flavor: Spicy</div>
+</td>
+<td>1</td>
+<td>Single Patty</td>
+<td>₹199</td>
+<td><strong>₹199</strong></td>
+</tr>
+
+<tr>
+<td>
+<div class="item-name">French Fries</div>
+<div class="item-desc">Golden crispy salted fries</div>
+<div class="item-specs">Size: Regular</div>
+</td>
+<td>1</td>
+<td>Regular</td>
+<td>₹109</td>
+<td><strong>₹109</strong></td>
+</tr>
+
+</tbody>
+</table>
+
+
+<div class="totals-section">
+
+<div>
+Items Ordered: 3
+</div>
+
+<div class="totals-table">
+<div>Subtotal: <strong>₹537</strong></div>
+<div>GST (5%): <strong>₹25.57</strong></div>
+<div class="net-total">Total Paid: <strong>₹562.57</strong></div>
+</div>
+
+</div>
+
+
+<div class="footer">
+
+<p><strong>Thank you for dining with KFC India!</strong></p>
+
+<p>Order again at www.online.kfc.co.in</p>
+
+<div class="powered-by">
+Powered by RDEP
+</div>
+
+</div>
+
 </body>
-</html>
-    `
+</html>    `
 
     const blob = new Blob([receiptContent], { type: "text/html" })
     const url = URL.createObjectURL(blob)
@@ -626,14 +784,15 @@ export default function Home() {
               <div className="text-[10px] font-medium text-gray-400 uppercase tracking-tight">{product.category}</div>
             </div>
           </div>
+
           <div className="flex items-center space-x-3 text-right">
             <div className="text-xs font-medium text-gray-500">x{product.quantity}</div>
             <div className="font-bold text-sm text-gray-900">
-              S${(product.price * product.quantity).toFixed(2)}
+              ₹{(product.price * product.quantity).toFixed(2)}
             </div>
           </div>
         </div>
-        
+
         {expandedProducts.includes(product.id) && (
           <div className="bg-white p-3 border-t border-gray-100">
             <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-[11px] font-medium text-gray-600">
@@ -644,10 +803,10 @@ export default function Home() {
                 <span className="text-gray-400">Size:</span> <span>{product.size}</span>
               </div>
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span className="text-gray-400">Base:</span> <span>S${product.baseAmount?.toFixed(2)}</span>
+                <span className="text-gray-400">Base:</span> <span>₹{product.baseAmount?.toFixed(2)}</span>
               </div>
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span className="text-gray-400">Tax:</span> <span>S${product.tax?.toFixed(2)}</span>
+                <span className="text-gray-400">Tax:</span> <span>₹{product.tax?.toFixed(2)}</span>
               </div>
             </div>
           </div>
@@ -659,22 +818,25 @@ export default function Home() {
   <div className="mt-4 space-y-1.5 border-t border-dashed pt-4">
     <div className="flex justify-between text-xs font-medium text-gray-500">
       <span>Subtotal</span>
-      <span>S${currentReceipt.subtotal.toFixed(2)}</span>
+      <span>₹{currentReceipt.subtotal.toFixed(2)}</span>
     </div>
+
     <div className="flex justify-between text-xs font-medium text-gray-500">
-      <span>GST (9%)</span>
-      <span>S${currentReceipt.tax.toFixed(2)}</span>
+      <span>GST (5%)</span>
+      <span>₹{currentReceipt.tax.toFixed(2)}</span>
     </div>
+
     <div className="flex justify-between text-base font-bold border-t border-gray-100 pt-2 mt-1">
       <span className="text-gray-900">Total Paid</span>
-      <span className="text-[#E4002B]">S${currentReceipt.total.toFixed(2)}</span>
+      <span className="text-[#E4002B]">₹{currentReceipt.total.toFixed(2)}</span>
     </div>
   </div>
 
   <div className="pt-3">
-    {/* KFC Branded Payment method */}
+    {/* Payment Method */}
     <div className="mt-2 p-3 bg-gray-50 rounded-xl border border-gray-100">
       <div className="flex items-center justify-between">
+
         <div className="flex items-center">
           <div className="w-8 h-8 bg-white rounded-full shadow-sm flex items-center justify-center mr-3 border border-gray-100">
             <svg className="w-4 h-4 text-[#E4002B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -682,12 +844,21 @@ export default function Home() {
               <line x1="1" y1="10" x2="23" y2="10" strokeWidth="2"></line>
             </svg>
           </div>
+
           <div>
-            <div className="text-[11px] font-bold text-gray-900 uppercase tracking-tight">Credit/Debit Card</div>
-            <div className="text-[10px] font-medium text-gray-400">Ending in •••• 4532</div>
+            <div className="text-[11px] font-bold text-gray-900 uppercase tracking-tight">
+              UPI Payment
+            </div>
+            <div className="text-[10px] font-medium text-gray-400">
+              Paid via Google Pay
+            </div>
           </div>
         </div>
-        <div className="text-sm font-bold text-gray-900">S${currentReceipt.total.toFixed(2)}</div>
+
+        <div className="text-sm font-bold text-gray-900">
+          ₹{currentReceipt.total.toFixed(2)}
+        </div>
+
       </div>
     </div>
   </div>
@@ -702,55 +873,69 @@ export default function Home() {
       </div>
       KFC Rewards
     </h3>
-    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Singapore</span>
+    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">India</span>
   </div>
 
   <div className="grid grid-cols-3 gap-3 mb-4">
-    {/* Points Earned from this order */}
+
+    {/* Points Earned */}
     <div className="text-center p-2 bg-gray-50 rounded-xl border border-gray-100">
-      <div className="text-lg font-bold text-gray-900">{Math.floor(currentReceipt.total)}</div>
-      <div className="text-[10px] font-medium text-gray-500 uppercase">Points Gained</div>
-    </div>
-    
-    {/* Total Balance Milestone */}
-    <div className="text-center p-2 bg-[#E4002B]/5 rounded-xl border border-[#E4002B]/10">
-      <div className="text-lg font-bold text-[#E4002B]">1,250</div>
-      <div className="text-[10px] font-medium text-[#E4002B] uppercase">Total Balance</div>
+      <div className="text-lg font-bold text-gray-900">
+        {Math.floor(currentReceipt.total / 10)}
+      </div>
+      <div className="text-[10px] font-medium text-gray-500 uppercase">Points Earned</div>
     </div>
 
-    {/* Reward Progress */}
+    {/* Total Balance */}
+    <div className="text-center p-2 bg-[#E4002B]/5 rounded-xl border border-[#E4002B]/10">
+      <div className="text-lg font-bold text-[#E4002B]">1,820</div>
+      <div className="text-[10px] font-medium text-[#E4002B] uppercase">Total Points</div>
+    </div>
+
+    {/* Expiring */}
     <div className="text-center p-2 bg-gray-50 rounded-xl border border-gray-100">
-      <div className="text-lg font-bold text-gray-900">15</div>
+      <div className="text-lg font-bold text-gray-900">120</div>
       <div className="text-[10px] font-medium text-gray-500 uppercase">Expiring Soon</div>
     </div>
+
   </div>
 
-  {/* KFC Singapore Program Rules Summary */}
+  {/* Reward Progress */}
   <div className="space-y-2">
     <div className="relative w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
-      <div className="absolute top-0 left-0 h-full bg-[#E4002B] w-3/4 rounded-full" />
+      <div className="absolute top-0 left-0 h-full bg-[#E4002B] w-2/3 rounded-full" />
     </div>
     <div className="flex justify-between items-center px-1">
-      <span className="text-[10px] font-medium text-gray-400">Next Reward: 200 pts</span>
-      <span className="text-[10px] font-bold text-[#E4002B]">75% to Free Zinger</span>
+      <span className="text-[10px] font-medium text-gray-400">
+        Next Reward: 200 pts
+      </span>
+      <span className="text-[10px] font-bold text-[#E4002B]">
+        65% to Free Fries
+      </span>
     </div>
   </div>
 
   <div className="mt-4 grid grid-cols-2 gap-2">
+
     <div className="flex items-center text-[10px] font-medium text-gray-600 bg-gray-50 px-2 py-1.5 rounded-md">
-      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> S$1 = 1 Point
+      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> ₹100 = 10 Points
     </div>
+
     <div className="flex items-center text-[10px] font-medium text-gray-600 bg-gray-50 px-2 py-1.5 rounded-md">
-      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> Birthday Deals
+      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> Birthday Rewards
     </div>
+
     <div className="flex items-center text-[10px] font-medium text-gray-600 bg-gray-50 px-2 py-1.5 rounded-md">
-      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> Skip the Queue
+      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> App Exclusive Deals
     </div>
+
     <div className="flex items-center text-[10px] font-medium text-gray-600 bg-gray-50 px-2 py-1.5 rounded-md">
-      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> App-only Offers
+      <span className="text-[#E4002B] mr-1.5 text-xs">✓</span> Free Sides & Upgrades
     </div>
+
   </div>
 </div>
+          
           {/* Full Width Banner Section */}
 <div className="bg-white rounded-lg border border-gray-200 overflow-hidden font-poppins relative">
   <Carousel 
@@ -764,13 +949,13 @@ export default function Home() {
       {/* Banner 1: Junior Party */}
       <CarouselItem>
         <a 
-          href="https://www.kfc.com.sg/kfc-party-celebrations" 
+          href="https://online.kfc.co.in/" 
           target="_blank" 
           rel="noopener noreferrer"
         >
           <div className="relative w-full aspect-[2/1]">
             <Image
-              src="https://static.kfc.com.sg/images/web/lg/JuniorParty_WhatsNewContentBanner.jpg"
+              src="https://cdn4.singleinterface.com/files/enterprise/coverphoto/34404/Taste-the-Epic-Banner-14-11-24-02-59-58.jpg"
               alt="KFC Junior Party"
               fill
               className="object-contain" // Prevents cutting/cropping
@@ -783,7 +968,7 @@ export default function Home() {
       {/* Banner 2: Double Dip */}
       <CarouselItem>
         <a 
-          href="https://www.kfc.com.sg/whats-new/KFCDoubleDip" 
+          href="https://online.kfc.co.in/" 
           target="_blank" 
           rel="noopener noreferrer"
         >
@@ -813,7 +998,7 @@ export default function Home() {
     </div>
   </Carousel>
 </div>
-          {/* Profile Update Section */}
+         {/* Profile Update Section */}
 <div className="bg-white rounded-lg border border-gray-200 p-4 font-poppins">
   {profileUpdateSuccess ? (
     <div className="text-center py-4 bg-green-50/50 rounded-xl border border-green-100">
@@ -822,9 +1007,13 @@ export default function Home() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
         </svg>
       </div>
-      <div className="text-sm font-bold text-gray-900 mb-1">Profile Updated!</div>
+
+      <div className="text-sm font-bold text-gray-900 mb-1">
+        Profile Updated Successfully
+      </div>
+
       <div className="text-[11px] font-medium text-green-700 uppercase tracking-wider">
-        +100 KFC Rewards Points Earned
+        +100 Rewards Points Added
       </div>
     </div>
   ) : (
@@ -834,45 +1023,53 @@ export default function Home() {
           <div className="bg-[#E4002B] p-1.5 rounded-lg mr-2.5">
             <User2 className="h-4 w-4 text-white" />
           </div>
-          Complete Profile
+          Complete Your Profile
         </h3>
+
         <Badge className="text-[10px] font-bold bg-[#E4002B] text-white hover:bg-[#E4002B] border-none px-2 py-0.5">
           +100 PTS
         </Badge>
       </div>
 
       <div className="space-y-4">
+
         <div className="grid grid-cols-2 gap-3">
+
           <div className="space-y-1.5">
             <Label htmlFor="mobile" className="text-[11px] font-bold text-gray-400 uppercase tracking-tight ml-1">
               Mobile Number
             </Label>
+
             <Input
               id="mobile"
-              placeholder="+65 ...."
+              placeholder="+91 9XXXXXXXXX"
               value={profile.mobile}
               onChange={(e) => setProfile((prev) => ({ ...prev, mobile: e.target.value }))}
               className="h-10 text-xs border-gray-200 focus:border-[#E4002B] focus:ring-[#E4002B] rounded-lg"
             />
           </div>
+
           <div className="space-y-1.5">
             <Label htmlFor="name" className="text-[11px] font-bold text-gray-400 uppercase tracking-tight ml-1">
               Full Name
             </Label>
+
             <Input
               id="name"
-              placeholder="Your Name"
+              placeholder="Your Full Name"
               value={profile.name}
               onChange={(e) => setProfile((prev) => ({ ...prev, name: e.target.value }))}
               className="h-10 text-xs border-gray-200 focus:border-[#E4002B] focus:ring-[#E4002B] rounded-lg"
             />
           </div>
+
         </div>
 
         <div className="space-y-1.5">
           <Label htmlFor="email" className="text-[11px] font-bold text-gray-400 uppercase tracking-tight ml-1">
             Email Address
           </Label>
+
           <Input
             id="email"
             type="email"
@@ -887,6 +1084,7 @@ export default function Home() {
           <Label htmlFor="gender" className="text-[11px] font-bold text-gray-400 uppercase tracking-tight ml-1">
             Gender
           </Label>
+
           <Select
             value={profile.gender}
             onValueChange={(value) => setProfile((prev) => ({ ...prev, gender: value }))}
@@ -894,11 +1092,13 @@ export default function Home() {
             <SelectTrigger className="h-10 text-xs border-gray-200 focus:border-[#E4002B] rounded-lg">
               <SelectValue placeholder="Select gender" />
             </SelectTrigger>
+
             <SelectContent>
               <SelectItem value="male" className="text-xs">Male</SelectItem>
               <SelectItem value="female" className="text-xs">Female</SelectItem>
               <SelectItem value="other" className="text-xs">Other</SelectItem>
             </SelectContent>
+
           </Select>
         </div>
 
@@ -906,13 +1106,14 @@ export default function Home() {
           className="w-full bg-[#E4002B] hover:bg-[#c30025] text-white h-11 text-xs font-bold rounded-xl shadow-lg shadow-red-100 transition-all active:scale-[0.98]"
           onClick={handleProfileUpdate}
         >
-          Update & Claim 100 Points
+          Update Profile & Earn 100 Points
         </Button>
+
       </div>
     </>
   )}
 </div>
-
+          
           {/* Quick Actions - Feedback Section */}
 <div className="bg-white rounded-lg border border-gray-200 p-4 font-poppins">
   {feedbackSubmitted ? (
@@ -920,16 +1121,23 @@ export default function Home() {
       <div className="w-12 h-12 bg-[#E4002B] rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg shadow-red-100">
         <ThumbsUp className="h-6 w-6 text-white" />
       </div>
-      <div className="text-sm font-bold text-gray-900 mb-1">Finger Lickin' Good!</div>
+
+      <div className="text-sm font-bold text-gray-900 mb-1">
+        Thank You for Your Feedback!
+      </div>
+
       <div className="text-xs font-medium text-gray-500">
-        Thank you for sharing your feedback with us.
+        Your response helps us improve your next visit.
       </div>
     </div>
   ) : (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-base font-semibold text-gray-900">Rate Your Experience</h3>
-        <span className="text-[10px] font-bold text-[#E4002B] bg-red-50 px-2 py-1 rounded">GUEST SURVEY</span>
+
+        <span className="text-[10px] font-bold text-[#E4002B] bg-red-50 px-2 py-1 rounded">
+          CUSTOMER FEEDBACK
+        </span>
       </div>
 
       {/* Star Rating Selection */}
@@ -951,13 +1159,17 @@ export default function Home() {
 
       {/* Inline Feedback Box */}
       <div className="space-y-2">
-        <Label htmlFor="comments" className="text-[11px] font-bold text-gray-400 uppercase tracking-tight ml-1">
+        <Label
+          htmlFor="comments"
+          className="text-[11px] font-bold text-gray-400 uppercase tracking-tight ml-1"
+        >
           Tell us more (Optional)
         </Label>
+
         <textarea
           id="comments"
           rows={3}
-          placeholder="How was your chicken? Was the service fast?"
+          placeholder="How was your food and service today?"
           className="w-full p-3 text-xs border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#E4002B] focus:border-[#E4002B] outline-none transition-all resize-none"
           value={feedbackText}
           onChange={(e) => setFeedbackText(e.target.value)}
@@ -971,91 +1183,121 @@ export default function Home() {
       >
         Submit Feedback
       </Button>
-      
+
       <p className="text-[10px] text-center text-gray-400 font-medium">
-        Your feedback helps us serve you better!
+        Your feedback helps us serve you better.
       </p>
     </div>
   )}
 </div>
-
-          {/* KFC App Exclusive Deals */}
-<div className="bg-white rounded-lg border border-gray-200 p-4 font-poppins relative overflow-hidden">
-  {/* Decorative Red Stripes (KFC Branding) */}
-  <div className="absolute top-0 right-0 flex gap-1 opacity-10 rotate-12 -mr-4 -mt-2">
-    <div className="w-2 h-20 bg-[#E4002B]"></div>
-    <div className="w-2 h-20 bg-[#E4002B]"></div>
-    <div className="w-2 h-20 bg-[#E4002B]"></div>
-  </div>
+          
+          {/* KFC India Offers */}
+<div className="bg-white rounded-lg border border-gray-200 p-4 font-poppins">
 
   <div className="flex items-center justify-between mb-4">
     <h3 className="text-base font-bold text-gray-900 flex items-center">
       <Sparkles className="mr-2 h-4 w-4 text-[#E4002B]" />
-      Deals Just for You
+      Exclusive Offers for You
     </h3>
-    <span className="text-[10px] font-bold text-[#E4002B] uppercase tracking-tighter">App Exclusives</span>
+
+    <span className="text-[10px] font-bold text-[#E4002B] uppercase tracking-tight">
+      KFC Deals
+    </span>
   </div>
 
   <div className="space-y-3">
-    {/* Deal 1: The Zinger Upgrade */}
-    <div className="group relative bg-white border border-gray-100 rounded-xl p-3 shadow-sm hover:border-[#E4002B]/30 transition-colors">
-      <div className="flex items-center justify-between">
-        <div className="flex-1">
-          <div className="flex items-center gap-2 mb-1">
-            <Badge className="bg-[#E4002B] text-[9px] font-bold px-1.5 py-0 h-4">HOT</Badge>
-            <h4 className="text-sm font-bold text-gray-900">Zinger Combo Upgrade</h4>
-          </div>
-          <p className="text-[11px] font-medium text-gray-500 leading-tight">
-            Flash this receipt to upgrade your next Zinger meal to a Box for only <span className="text-[#E4002B] font-bold">S$2.50</span>.
-          </p>
+
+    {/* Offer 1 */}
+    <div className="border border-gray-100 rounded-xl overflow-hidden shadow-sm">
+      <div className="bg-[#E4002B] text-white text-center py-3 px-3">
+        <div className="text-xs font-bold uppercase tracking-wide">
+          First Order Special
         </div>
-        <div className="ml-3 w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center text-xl">
-          🍔
+        <div className="text-lg font-extrabold mt-1">
+          FREE CLASSIC ZINGER
         </div>
+      </div>
+
+      <div className="p-3 text-center">
+        <div className="text-xs text-gray-500 mb-3">
+          Min. Order Value ₹499
+        </div>
+
+        <a
+          href="https://online.kfc.co.in/offers"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-black text-white text-xs font-bold py-2 rounded-full"
+        >
+          Apply Offer
+        </a>
       </div>
     </div>
 
-    {/* Deal 2: Cheese Fries Special */}
-    <div className="group relative bg-white border border-gray-100 rounded-xl p-3 shadow-sm hover:border-[#E4002B]/30 transition-colors">
-      <div className="flex items-center justify-between">
-        <div className="flex-1">
-          <div className="flex items-center gap-2 mb-1">
-            <Badge className="bg-orange-500 text-white text-[9px] font-bold px-1.5 py-0 h-4">SNACK</Badge>
-            <h4 className="text-sm font-bold text-gray-900">S$3.00 Cheese Fries</h4>
-          </div>
-          <p className="text-[11px] font-medium text-gray-500 leading-tight">
-            Add-on a regular Cheese Fries with any purchase above S$15.00. 
-          </p>
+
+    {/* Offer 2 */}
+    <div className="border border-gray-100 rounded-xl overflow-hidden shadow-sm">
+      <div className="bg-[#E4002B] text-white text-center py-3 px-3">
+        <div className="text-xs font-bold uppercase tracking-wide">
+          Limited Deal
         </div>
-        <div className="ml-3 w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center text-xl">
-          🍟
+        <div className="text-lg font-extrabold mt-1">
+          2 PC HOT & CRISPY @ ₹99
         </div>
+      </div>
+
+      <div className="p-3 text-center">
+        <div className="text-xs text-gray-500 mb-3">
+          Min. Order Value ₹499
+        </div>
+
+        <a
+          href="https://online.kfc.co.in/offers"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-black text-white text-xs font-bold py-2 rounded-full"
+        >
+          Apply Offer
+        </a>
       </div>
     </div>
 
-    {/* Deal 3: Delivery Promo */}
-    <div className="group relative bg-[#E4002B]/5 border border-[#E4002B]/10 rounded-xl p-3 shadow-sm">
-      <div className="flex items-center justify-between">
-        <div className="flex-1">
-          <div className="flex items-center gap-2 mb-1">
-            <Badge className="bg-gray-900 text-white text-[9px] font-bold px-1.5 py-0 h-4">CODE</Badge>
-            <h4 className="text-sm font-bold text-[#E4002B]">FREE DELIVERY</h4>
-          </div>
-          <p className="text-[11px] font-medium text-gray-700 leading-tight">
-            Use code <span className="font-bold underline">KFCSG5</span> for free delivery on your next app order.
-          </p>
+
+    {/* Offer 3 */}
+    <div className="border border-gray-100 rounded-xl overflow-hidden shadow-sm">
+      <div className="bg-[#E4002B] text-white text-center py-3 px-3">
+        <div className="text-xs font-bold uppercase tracking-wide">
+          Special Discount
         </div>
-        <div className="ml-3 w-12 h-12 bg-white rounded-lg flex items-center justify-center text-xl shadow-inner">
-          🛵
+        <div className="text-lg font-extrabold mt-1">
+          UPTO ₹100 OFF
         </div>
       </div>
+
+      <div className="p-3 text-center">
+        <div className="text-xs text-gray-500 mb-3">
+          Min. Order Value ₹699
+        </div>
+
+        <a
+          href="https://online.kfc.co.in/offers"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-black text-white text-xs font-bold py-2 rounded-full"
+        >
+          Apply Offer
+        </a>
+      </div>
     </div>
+
   </div>
 
   <p className="mt-4 text-[9px] text-center text-gray-400 font-medium italic">
-    *T&Cs apply. Valid at all KFC Singapore outlets except Zoo and Jewel.
+    *Offers may vary by location. T&Cs apply.
   </p>
+
 </div>
+          
           {/* Receipt Actions (2) */}
 <div className="bg-white rounded-lg border border-gray-200 p-3 font-poppins">
   <div className="flex justify-center space-x-4">
@@ -1129,9 +1371,11 @@ export default function Home() {
 
       {/* Social Media & Store Address */}
 <div className="bg-white rounded-lg border border-gray-200 p-3 font-poppins">
+
   <div className="flex justify-center space-x-6 mb-3">
+
     <button
-      onClick={() => handleSocialLink("https://www.instagram.com/kfc_sg/")}
+      onClick={() => handleSocialLink("https://www.instagram.com/kfcindia_official/")}
       className="flex flex-col items-center"
     >
       <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center mb-1">
@@ -1139,8 +1383,9 @@ export default function Home() {
       </div>
       <span className="text-xs font-medium">Instagram</span>
     </button>
+
     <button
-      onClick={() => handleSocialLink("https://www.facebook.com/KFC.SG/")}
+      onClick={() => handleSocialLink("https://www.facebook.com/KFCIndia")}
       className="flex flex-col items-center"
     >
       <div className="w-8 h-8 rounded-full bg-[#1877F2] flex items-center justify-center mb-1">
@@ -1148,8 +1393,9 @@ export default function Home() {
       </div>
       <span className="text-xs font-medium">Facebook</span>
     </button>
+
     <button
-      onClick={() => handleSocialLink("https://www.kfc.com.sg")}
+      onClick={() => handleSocialLink("https://online.kfc.co.in")}
       className="flex flex-col items-center"
     >
       <div className="w-8 h-8 rounded-full bg-[#E4002B] flex items-center justify-center mb-1">
@@ -1157,28 +1403,47 @@ export default function Home() {
       </div>
       <span className="text-xs font-medium">Website</span>
     </button>
+
   </div>
+
 
   {/* Collapsible Store Location */}
   <div className="text-xs text-gray-600 text-center mb-3 bg-gray-50 p-3 rounded-lg">
+
     <button
       onClick={() => setShowStoreLocation(!showStoreLocation)}
       className="w-full flex items-center justify-center mb-2 hover:text-[#E4002B] transition-colors"
     >
       <MapPin className="h-3 w-3 mr-1 text-[#E4002B]" />
-      <span className="font-semibold text-[#E4002B]">KFC Singapore HQ {showStoreLocation ? "▲" : "▼"}</span>
+      <span className="font-semibold text-[#E4002B]">
+        KFC India Corporate Office {showStoreLocation ? "▲" : "▼"}
+      </span>
     </button>
 
     {showStoreLocation && (
       <div className="space-y-0.5">
-        <p className="font-bold text-gray-900">Kentucky Fried Chicken Management Pte Ltd</p>
-        <p>10 Jalan Ahmad Ibrahim</p>
-        <p>Singapore 628965</p>
-        <p className="mt-2 text-[10px]">GST Reg No: M2-0021281-1</p>
-        <p className="mt-1 text-[#E4002B] font-semibold">Manager on Duty: {currentReceipt.associate}</p>
+
+        <p className="font-bold text-gray-900">
+          Devyani International Ltd (KFC India)
+        </p>
+
+        <p>Plot No. 31, Sector 44</p>
+        <p>Gurugram, Haryana 122003</p>
+        <p>India</p>
+
+        <p className="mt-2 text-[10px]">
+          GSTIN: 06AACCD5295M1Z3
+        </p>
+
+        <p className="mt-1 text-[#E4002B] font-semibold">
+          Manager on Duty: {currentReceipt.associate}
+        </p>
+
       </div>
     )}
+
   </div>
+
 
   {/* Compact Terms */}
   <Button
@@ -1189,18 +1454,31 @@ export default function Home() {
   >
     Terms & Conditions {showTerms ? "▲" : "▼"}
   </Button>
+
   {showTerms && (
     <div className="text-[11px] text-gray-500 mt-2 space-y-1 px-2 font-medium">
+
       <p>• Rewards points valid for 6 months from issue date.</p>
-      <p>• Prices include 9% GST. For feedback: kfc.com.sg/contact-us.</p>
-      <p>• Finger Lickin' Good! All rights reserved.</p>
+
+      <p>• Prices include applicable GST as per Indian regulations.</p>
+
+      <p>• Offers may vary by city and restaurant location.</p>
+
+      <p>• © KFC India. All rights reserved.</p>
+
     </div>
   )}
 
+
   {/* Powered by RDEP */}
   <div className="text-center mt-2 pt-2 border-t border-gray-100">
+
     <div className="flex items-center justify-center space-x-1">
-      <span className="text-xs text-gray-400 font-medium">Powered by</span>
+
+      <span className="text-xs text-gray-400 font-medium">
+        Powered by
+      </span>
+
       <Image
         src="/images/design-mode/RDEP%20cropped.png"
         alt="RDEP"
@@ -1208,8 +1486,11 @@ export default function Home() {
         height={16}
         className="object-contain"
       />
+
     </div>
+
   </div>
+
 </div>
           <div id="height-marker" style={{ height: "1px" }} />
         </div>
