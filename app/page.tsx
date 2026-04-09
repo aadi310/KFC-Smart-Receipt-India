@@ -709,18 +709,20 @@ Powered by RDEP
 
   <div className="flex items-center justify-between">
 
+    {/* KFC Logo */}
     <div className="flex items-center">
-      <img 
-        src="/images/kfc-logo.png"
+      <img
+        src="/images/design-mode/KFC_logo.png"
         alt="KFC"
         className="h-24 w-auto object-contain"
       />
     </div>
 
+    {/* QR Code */}
     <div className="bg-gray-100 p-2 rounded-md border border-gray-200">
       <Image
-        src="/images/qr-kfc-offers.png"
-        alt="Scan for offers"
+        src="/images/design-mode/qr-code.jpg"
+        alt="Scan QR"
         width={64}
         height={64}
         className="object-contain"
@@ -728,7 +730,6 @@ Powered by RDEP
     </div>
 
   </div>
-
 
   {/* Greeting + Total */}
   <div className="flex items-center justify-between mt-6">
@@ -752,8 +753,7 @@ Powered by RDEP
 
   </div>
 
-
-  {/* Receipt Info */}
+  {/* Receipt ID + Date */}
   <div className="grid grid-cols-2 gap-4 mt-5">
 
     <div className="bg-gray-50 p-3 rounded-xl border border-gray-100 shadow-sm">
