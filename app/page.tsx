@@ -1582,93 +1582,100 @@ Powered by RDEP
 
         {/* Transaction History Modal */}
 {showTransactionHistory && (
-  <div
-    style={getModalPositionRelativeToContainer(historyButtonRef)}
-    className="bg-white rounded-lg w-full overflow-hidden shadow-2xl z-[9999] max-w-sm border border-gray-100 font-poppins"
-  >
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center">
 
-    {/* Header */}
-    <div className="flex justify-between items-center p-4 bg-[#E4002B] text-white">
-      <h3 className="text-base font-bold flex items-center uppercase tracking-tight">
-        <History className="h-5 w-5 mr-2" />
-        Order History
-      </h3>
+    {/* Backdrop */}
+    <div
+      className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"
+      onClick={() => setShowTransactionHistory(false)}
+    />
 
-      <Button
-        variant="ghost"
-        size="icon"
-        className="h-8 w-8 text-white hover:bg-[#c30025] rounded-full"
-        onClick={() => setShowTransactionHistory(false)}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-4 w-4"
+    {/* Modal */}
+    <div className="relative bg-white rounded-lg w-full max-w-sm overflow-hidden shadow-2xl border border-gray-100 font-poppins">
+
+      {/* Header */}
+      <div className="flex justify-between items-center p-4 bg-[#E4002B] text-white">
+        <h3 className="text-base font-bold flex items-center uppercase tracking-tight">
+          <History className="h-5 w-5 mr-2" />
+          Order History
+        </h3>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-8 w-8 text-white hover:bg-[#c30025] rounded-full"
+          onClick={() => setShowTransactionHistory(false)}
         >
-          <path d="M18 6 6 18"></path>
-          <path d="m6 6 12 12"></path>
-        </svg>
-      </Button>
-    </div>
-
-    {/* Transaction List */}
-    <div className="max-h-80 overflow-y-auto p-3 bg-gray-50/50">
-      <div className="space-y-2">
-
-        {transactionHistory.map((transaction) => (
-
-          <button
-            key={transaction.id}
-            onClick={() => {
-              setCurrentReceiptId(transaction.id)
-              setShowTransactionHistory(false)
-              window.scrollTo({ top: 0, behavior: "smooth" })
-            }}
-            className="w-full flex items-center p-3 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-[#E4002B] transition-all cursor-pointer group"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-4 w-4"
           >
-
-            <div className="bg-red-50 p-2 rounded-lg mr-3 group-hover:bg-[#E4002B] transition-colors">
-              <FileText className="h-5 w-5 text-[#E4002B] group-hover:text-white" />
-            </div>
-
-            <div className="flex-grow text-left">
-              <div className="font-bold text-sm text-gray-900 leading-none mb-1">
-                KFC
-              </div>
-
-              <div className="text-gray-400 text-[11px] font-medium uppercase tracking-tighter">
-                {transaction.date}
-              </div>
-            </div>
-
-            <div className="font-bold text-[#E4002B]">
-              ₹{transaction.amount.toFixed(2)}
-            </div>
-
-          </button>
-
-        ))}
-
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </Button>
       </div>
-    </div>
 
-    {/* Footer */}
-    <div className="p-3 border-t bg-white">
-      <Button
-        className="w-full bg-gray-900 hover:bg-black text-white font-bold h-10 rounded-xl transition-all"
-        onClick={() => setShowTransactionHistory(false)}
-      >
-        Close History
-      </Button>
-    </div>
+      {/* Transaction List */}
+      <div className="max-h-80 overflow-y-auto p-3 bg-gray-50/50">
+        <div className="space-y-2">
 
+          {transactionHistory.map((transaction) => (
+
+            <button
+              key={transaction.id}
+              onClick={() => {
+                setCurrentReceiptId(transaction.id)
+                setShowTransactionHistory(false)
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }}
+              className="w-full flex items-center p-3 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-[#E4002B] transition-all cursor-pointer group"
+            >
+
+              <div className="bg-red-50 p-2 rounded-lg mr-3 group-hover:bg-[#E4002B] transition-colors">
+                <FileText className="h-5 w-5 text-[#E4002B] group-hover:text-white" />
+              </div>
+
+              <div className="flex-grow text-left">
+                <div className="font-bold text-sm text-gray-900 leading-none mb-1">
+                  KFC
+                </div>
+
+                <div className="text-gray-400 text-[11px] font-medium uppercase tracking-tighter">
+                  {transaction.date}
+                </div>
+              </div>
+
+              <div className="font-bold text-[#E4002B]">
+                ₹{transaction.amount.toFixed(2)}
+              </div>
+
+            </button>
+
+          ))}
+
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="p-3 border-t bg-white">
+        <Button
+          className="w-full bg-gray-900 hover:bg-black text-white font-bold h-10 rounded-xl transition-all"
+          onClick={() => setShowTransactionHistory(false)}
+        >
+          Close History
+        </Button>
+      </div>
+
+    </div>
   </div>
 )}
         
