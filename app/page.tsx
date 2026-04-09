@@ -87,7 +87,7 @@ export default function Home() {
   const [rating, setRating] = useState(0)
   const [feedbackText, setFeedbackText] = useState("")
 
-  const customerName = "Ahmad"
+  const customerName = "Deepak"
 
   // Carousel refs and APIs
   const [promoApi, setPromoApi] = useState<CarouselApi>()
@@ -706,54 +706,83 @@ Powered by RDEP
         <div className="flex flex-col w-full gap-3 pb-4 px-3">
           {/* Top Section - Row 1: Logo left, QR right */}
 <div className="bg-white rounded-lg border border-gray-200 p-4 mt-3 font-poppins">
+
   <div className="flex items-center justify-between">
+
     <div className="flex items-center">
-      {/* Increased height from h-14 to h-24 for a much bolder presence */}
       <img 
-        src="https://logowik.com/content/uploads/images/674_kfc.jpg" 
-        alt="KFC" 
-        className="h-24 w-auto object-contain" 
+        src="/images/kfc-logo.png"
+        alt="KFC"
+        className="h-24 w-auto object-contain"
       />
     </div>
+
     <div className="bg-gray-100 p-2 rounded-md border border-gray-200">
       <Image
-        src="/images/design-mode/800px-QR_code_for_mobile_English_Wikipedia.svg.png"
-        alt="QR Code"
+        src="/images/qr-kfc-offers.png"
+        alt="Scan for offers"
         width={64}
         height={64}
         className="object-contain"
       />
     </div>
+
   </div>
 
+
+  {/* Greeting + Total */}
   <div className="flex items-center justify-between mt-6">
+
     <div className="bg-[#E4002B] px-5 py-2.5 rounded-full flex items-center shadow-md">
       <User2 className="h-5 w-5 mr-2 text-white" />
-      <span className="text-sm font-bold text-white tracking-tight">Hello {customerName}!</span>
+      <span className="text-sm font-bold text-white tracking-tight">
+        Hi {customerName}
+      </span>
     </div>
 
     <div className="bg-white border-2 border-[#E4002B] px-4 py-2 rounded-xl text-right">
-      <div className="text-[10px] font-semibold text-gray-400 uppercase leading-none mb-1">Total Paid</div>
+      <div className="text-[10px] font-semibold text-gray-400 uppercase leading-none mb-1">
+        Total Paid
+      </div>
+
       <div className="text-sm font-bold text-[#E4002B] leading-none">
-        S${currentReceipt.total.toFixed(2)}
+        ₹{currentReceipt.total.toFixed(2)}
       </div>
     </div>
+
   </div>
 
-  {/* Top Section - Row 3: Receipt ID and Date & Time */}
+
+  {/* Receipt Info */}
   <div className="grid grid-cols-2 gap-4 mt-5">
+
     <div className="bg-gray-50 p-3 rounded-xl border border-gray-100 shadow-sm">
-      <div className="text-[10px] text-gray-400 font-extrabold uppercase tracking-widest mb-1">Receipt ID</div>
-      <div className="text-xs font-mono font-bold text-gray-800 tracking-tight">{currentReceipt.id}</div>
-    </div>
-    <div className="bg-gray-50 p-3 rounded-xl border border-gray-100 shadow-sm">
-      <div className="text-[10px] text-gray-400 font-extrabold uppercase tracking-widest mb-1">Date & Time</div>
-      <div className="text-xs font-bold text-gray-800">
-        {currentReceipt.date} <span className="text-gray-300 mx-1">|</span> {currentReceipt.time}
+      <div className="text-[10px] text-gray-400 font-extrabold uppercase tracking-widest mb-1">
+        Receipt ID
+      </div>
+
+      <div className="text-xs font-mono font-bold text-gray-800 tracking-tight">
+        {currentReceipt.id}
       </div>
     </div>
+
+    <div className="bg-gray-50 p-3 rounded-xl border border-gray-100 shadow-sm">
+      <div className="text-[10px] text-gray-400 font-extrabold uppercase tracking-widest mb-1">
+        Date & Time
+      </div>
+
+      <div className="text-xs font-bold text-gray-800">
+        {currentReceipt.date}
+        <span className="text-gray-300 mx-1">|</span>
+        {currentReceipt.time}
+      </div>
+
+    </div>
+
   </div>
+
 </div>
+          
           {/* Purchase Details */}
 <div className="bg-white rounded-lg border border-gray-200 p-3 font-poppins">
   <div className="flex items-center justify-between mb-3">
