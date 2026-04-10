@@ -68,6 +68,9 @@ export default function Home() {
   const [showReferModal, setShowReferModal] = useState(false)
   const [showStoreLocation, setShowStoreLocation] = useState(false)
   const receiptContainerRef = useRef<HTMLDivElement>(null)
+  const [expandedProducts, setExpandedProducts] = useState([])
+  const [expandedItemFeedback, setExpandedItemFeedback] = useState([]) 
+  const [itemFeedback, setItemFeedback] = useState({})
   const [feedback, setFeedback] = useState({
     service: 0,
     quality: 0,
@@ -298,6 +301,53 @@ export default function Home() {
     )
   }
 
+  const toggleItemFeedback = (itemId) => {
+  setExpandedItemFeedback((prev) =>
+    prev.includes(itemId)
+      ? prev.filter((id) => id !== itemId)
+      : [...prev, itemId]
+  )
+}
+
+  const setItemRating = (itemId, rating) => {
+  setItemFeedback((prev) => ({
+    ...prev,
+    [currentReceipt.id]: {
+      ...(prev[currentReceipt.id] || {}),
+      [itemId]: {
+        ...(prev[currentReceipt.id]?.[itemId] || {}),
+        rating
+      }
+    }
+  }))
+}
+  const toggleItemTag = (itemId, tag) => {
+  setItemFeedback((prev) => {
+    const receiptData = prev[currentReceipt.id] || {}
+    const itemData = receiptData[itemId] || {}
+
+    const currentTags = itemData.tags || []
+
+    const updatedTags = currentTags.includes(tag)
+      ? currentTags.filter((t) => t !== tag)
+      : [...currentTags, tag]
+
+    return {
+      ...prev,
+      [currentReceipt.id]: {
+        ...receiptData,
+        [itemId]: {
+          ...itemData,
+          tags: updatedTags
+        }
+      }
+    }
+  })
+}
+  useEffect(() => {
+  setExpandedItemFeedback([])
+  setExpandedProducts([])
+}, [currentReceipt.id])
   const handleProfileUpdate = () => {
     setProfileUpdateSuccess(true)
     setTimeout(() => setProfileUpdateSuccess(false), 3000)
@@ -785,66 +835,196 @@ Powered by RDEP
           
           {/* Purchase Details */}
 <div className="bg-white rounded-lg border border-gray-200 p-3 font-poppins">
+
   <div className="flex items-center justify-between mb-3">
     <h3 className="text-base font-semibold flex items-center text-[#E4002B]">
-      <ShoppingBagIcon className="mr-2 h-4 w-4" />
+      <Utensils className="mr-2 h-4 w-4" />
       Order Details
     </h3>
-    <Badge variant="outline" className="text-[10px] border-[#E4002B]/30 text-[#E4002B] font-medium">
+
+    <Badge
+      variant="outline"
+      className="text-[10px] border-[#E4002B]/30 text-[#E4002B] font-medium"
+    >
       {currentReceipt.items.length} Items
     </Badge>
   </div>
 
+
   <div className="space-y-2">
+
     {currentReceipt.items.map((product) => (
+
       <div key={product.id} className="border border-gray-100 rounded-lg overflow-hidden">
+
+
+        {/* Item header */}
         <div
           className="flex items-center justify-between p-2.5 bg-gray-50/50 cursor-pointer"
           onClick={() => toggleProductExpansion(product.id)}
         >
+
           <div className="flex items-center flex-1">
+
             <ChevronRight
               className={`h-3 w-3 mr-2 text-[#E4002B] transition-transform duration-200 ${
                 expandedProducts.includes(product.id) ? "rotate-90" : ""
               }`}
             />
+
             <div className="flex-1">
-              <span className="font-semibold text-sm text-gray-900">{product.name}</span>
-              <div className="text-[10px] font-medium text-gray-400 uppercase tracking-tight">{product.category}</div>
+
+              <span className="font-semibold text-sm text-gray-900">
+                {product.name}
+              </span>
+
+              <div className="text-[10px] font-medium text-gray-400 uppercase tracking-tight">
+                {product.category}
+              </div>
+
             </div>
+
           </div>
 
+
           <div className="flex items-center space-x-3 text-right">
-            <div className="text-xs font-medium text-gray-500">x{product.quantity}</div>
+
+            <div className="text-xs font-medium text-gray-500">
+              x{product.quantity}
+            </div>
+
             <div className="font-bold text-sm text-gray-900">
               ₹{(product.price * product.quantity).toFixed(2)}
             </div>
+
           </div>
+
         </div>
 
+
+        {/* Expanded details */}
         {expandedProducts.includes(product.id) && (
+
           <div className="bg-white p-3 border-t border-gray-100">
+
             <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-[11px] font-medium text-gray-600">
+
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span className="text-gray-400">Code:</span> <span>{product.itemCode}</span>
+                <span className="text-gray-400">Code:</span>
+                <span>{product.itemCode}</span>
               </div>
+
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span className="text-gray-400">Size:</span> <span>{product.size}</span>
+                <span className="text-gray-400">Size:</span>
+                <span>{product.size}</span>
               </div>
+
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span className="text-gray-400">Base:</span> <span>₹{product.baseAmount?.toFixed(2)}</span>
+                <span className="text-gray-400">Base:</span>
+                <span>₹{product.baseAmount?.toFixed(2)}</span>
               </div>
+
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span className="text-gray-400">Tax:</span> <span>₹{product.tax?.toFixed(2)}</span>
+                <span className="text-gray-400">Tax:</span>
+                <span>₹{product.tax?.toFixed(2)}</span>
               </div>
+
             </div>
+
           </div>
+
         )}
+
+
+        {/* Feedback Toggle */}
+        <div className="px-3 pb-2 pt-1">
+
+          <button
+            onClick={() => toggleItemFeedback(product.id)}
+            className="text-[11px] text-[#E4002B] font-semibold"
+          >
+            {expandedItemFeedback.includes(product.id)
+              ? "Hide item feedback"
+              : "Rate this item"}
+          </button>
+
+        </div>
+
+
+        {/* Feedback Panel */}
+        {expandedItemFeedback.includes(product.id) && (
+
+          <div className="mx-3 mb-3 p-3 border border-gray-200 rounded-lg bg-gray-50">
+
+
+            {/* Rating */}
+            <div className="flex justify-center gap-2 mb-3">
+
+              {[1,2,3,4,5].map((star) => (
+
+                <button
+                  key={star}
+                  onClick={() => setItemRating(product.id, star)}
+                >
+
+                  <Star
+                    className={`h-4 w-4 ${
+                      star <=
+                      (itemFeedback[currentReceipt.id]?.[product.id]?.rating || 0)
+                        ? "fill-[#E4002B] text-[#E4002B]"
+                        : "text-gray-300"
+                    }`}
+                  />
+
+                </button>
+
+              ))}
+
+            </div>
+
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 justify-center">
+
+              {["Taste","Freshness","Portion","Temperature"].map((tag) => {
+
+                const active =
+                  itemFeedback[currentReceipt.id]?.[product.id]?.tags?.includes(tag)
+
+                return (
+
+                  <button
+                    key={tag}
+                    onClick={() => toggleItemTag(product.id, tag)}
+                    className={`text-[10px] px-2 py-1 rounded-full border ${
+                      active
+                        ? "bg-[#E4002B] text-white border-[#E4002B]"
+                        : "border-gray-200"
+                    }`}
+                  >
+                    {tag}
+                  </button>
+
+                )
+
+              })}
+
+            </div>
+
+          </div>
+
+        )}
+
       </div>
+
     ))}
+
   </div>
 
+
+  {/* Totals */}
   <div className="mt-4 space-y-1.5 border-t border-dashed pt-4">
+
     <div className="flex justify-between text-xs font-medium text-gray-500">
       <span>Subtotal</span>
       <span>₹{currentReceipt.subtotal.toFixed(2)}</span>
@@ -857,20 +1037,27 @@ Powered by RDEP
 
     <div className="flex justify-between text-base font-bold border-t border-gray-100 pt-2 mt-1">
       <span className="text-gray-900">Total Paid</span>
-      <span className="text-[#E4002B]">₹{currentReceipt.total.toFixed(2)}</span>
+      <span className="text-[#E4002B]">
+        ₹{currentReceipt.total.toFixed(2)}
+      </span>
     </div>
+
   </div>
 
+
+  {/* Payment */}
   <div className="pt-3">
-    {/* Payment Method */}
+
     <div className="mt-2 p-3 bg-gray-50 rounded-xl border border-gray-100">
+
       <div className="flex items-center justify-between">
 
         <div className="flex items-center">
+
           <div className="w-8 h-8 bg-white rounded-full shadow-sm flex items-center justify-center mr-3 border border-gray-100">
             <svg className="w-4 h-4 text-[#E4002B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" strokeWidth="2"></rect>
-              <line x1="1" y1="10" x2="23" y2="10" strokeWidth="2"></line>
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
             </svg>
           </div>
 
@@ -878,10 +1065,12 @@ Powered by RDEP
             <div className="text-[11px] font-bold text-gray-900 uppercase tracking-tight">
               UPI Payment
             </div>
+
             <div className="text-[10px] font-medium text-gray-400">
               Paid via Google Pay
             </div>
           </div>
+
         </div>
 
         <div className="text-sm font-bold text-gray-900">
@@ -889,8 +1078,11 @@ Powered by RDEP
         </div>
 
       </div>
+
     </div>
+
   </div>
+
 </div>
 
           {/* KFC Rewards Loyalty Section */}
