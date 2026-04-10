@@ -29,6 +29,7 @@ import {
   Sparkles,
   MapPin,
   ShoppingBagIcon,
+  Utensils,
 } from "lucide-react"
 
 interface Receipt {
