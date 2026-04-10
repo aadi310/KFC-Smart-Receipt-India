@@ -68,7 +68,6 @@ export default function Home() {
   const [showReferModal, setShowReferModal] = useState(false)
   const [showStoreLocation, setShowStoreLocation] = useState(false)
   const receiptContainerRef = useRef<HTMLDivElement>(null)
-  const [expandedProducts, setExpandedProducts] = useState([])
   const [expandedItemFeedback, setExpandedItemFeedback] = useState([]) 
   const [itemFeedback, setItemFeedback] = useState({})
   const [feedback, setFeedback] = useState({
